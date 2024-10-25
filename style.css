@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url('Rock-Paper-Scissors/images/RPS_background.jpg'); /* Adjusted path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    animation: fadeIn 1s ease;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.choice:active {
+    transform: scale(0.9); /* Button press effect */
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    border-color: #555;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.choice span {
+    font-size: 2.5rem;
+    transition: transform 0.2s ease;
+}
+
+.choice:hover span {
+    transform: rotate(10deg);
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#user-score, #comp-score {
+    font-size: 4rem;
+    transition: color 0.3s ease;
+}
+
+.msg-container {
+    margin-top: 3rem;
+}
+
+#msg {
+    background-color: black;
+    color: #fff;
+    height: 4rem;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.history {
+    margin-top: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.history h3 {
+    margin-bottom: 10px;
+}
+
+.history ul {
+    list-style: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
